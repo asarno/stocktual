@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Sanford';
+  src: local('Sanford'), url(./assets/sanford.ttf) format('ttf');
+}
+
+html {
+  overflow:   scroll;
+  font-family: 'Sanford';
+  color: #0e1647;
+  margin: 0px;
+  padding: 0px;
+  background-color: #FDFDF0;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
