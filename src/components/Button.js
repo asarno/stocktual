@@ -16,7 +16,7 @@ const Container = styled.a`
 const Button = ({ onClick, opacity }) => {
 
     return (
-        <Container hrefopacity={opacity} onClick={onClick}>
+        <Container opacity={opacity} onClick={onClick}>
             Contact
         </Container>
     );

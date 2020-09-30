@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Title from './components/Title';
 
 import {
@@ -8,7 +8,6 @@ import {
 } from './components/styled';
 
 import Button from './components/Button';
-import Contact from './Contact';
 
 import { useWindowSize } from './hooks/useWindowSize';
 import useWindowScrollPosition from "@rehooks/window-scroll-position";
@@ -18,11 +17,10 @@ function App() {
   const { width } = useWindowSize();
   const currentPosition = y;
 
-  const [isContact, setIsContact] = useState(false);
+  // const [isContact, setIsContact] = useState(false);
 
   return (
     <MainContainer>
-      {!isContact &&
         <TextContainer width={width}>
 
           <Title currentPosition={currentPosition} />
@@ -42,11 +40,10 @@ function App() {
             (noun): ...us.
           </Text>
 
-          <Button opacity={currentPosition / 464} onClick={() => setIsContact(true)} />
+          <Button opacity={currentPosition / 464} onClick={() => window.location.replace("mailto:austin.kolodney@gmail.com?subject=Stocktual%20Inquiry")} />
         </TextContainer>
-      }
       
-      {isContact && <Contact />}
+      {/* {isContact && <Contact />} */}
 
     </MainContainer>
   );
