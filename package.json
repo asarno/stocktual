@@ -2,7 +2,7 @@
   "name": "stocktual",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://asarno.github.io/stocktual",
+  "homepage": "https://stocktual.com",
   "dependencies": {
     "@rehooks/window-scroll-position": "^1.0.1",
     "@testing-library/jest-dom": "^4.2.4",
