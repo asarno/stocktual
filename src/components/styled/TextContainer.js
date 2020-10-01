@@ -6,7 +6,7 @@ const TextContainer = styled.div`
     justify-content: center;
     align-items: flex-start;
     padding: 1rem;
-    position: fixed;
+    position: absolute;
     top: 10vh;
     width: ${({ width }) => width > 450 ? '70vw' : '90vw'};;
 `;

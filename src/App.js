@@ -26,7 +26,7 @@ function App() {
           <Title currentPosition={currentPosition} />
 
           <Text
-            opacity={currentPosition / 232}
+            opacity={1}
             style={{
               maxWidth: '30vw',
             }}
@@ -35,15 +35,18 @@ function App() {
           </Text>
 
           <Text
-            opacity={currentPosition / 348}
+            opacity={1}
           >
             (noun): ...us.
           </Text>
 
-          <Button opacity={currentPosition / 464} onClick={() => window.location.replace("mailto:austin.kolodney@gmail.com?subject=Stocktual%20Inquiry")} />
-        </TextContainer>
+          <Button style={{ position: 'relative', left: '1rem' }} opacity={1} onClick={() => window.location.replace("mailto:austin.kolodney@gmail.com?subject=Stocktual%20Inquiry")} />
       
+        </TextContainer>
+          <img style={{ width: '10vw', position: 'absolute', bottom: '5rem', right: '5rem' }} alt="period" src={require('./assets/paint.png')} />
       {/* {isContact && <Contact />} */}
+
+      <span style={{ position: 'absolute', bottom: '1rem', color: '#0f17475e'}}>website in progress..</span>
 
     </MainContainer>
   );

@@ -34,11 +34,11 @@ const Secondary = styled.span`
 
 const Title = ({ currentPosition }) => {
     const { width } = useWindowSize();
-    const opacity = currentPosition / 116;
+    const opacity = 1;
 
     return (
         <Container width={width}>
-            <Main width={width}>STOCKTUAL</Main>
+            <Main width={width}>STOCKTUAL<img style={{ width: '5vw', position: 'relative', top: '1.5rem' }} alt="period" src={require('../assets/paint.png')} /></Main>
             <Secondary opacity={opacity}>/Staak-CHo͞oəl/</Secondary>
         </Container>
     )

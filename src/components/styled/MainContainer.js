@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 
 const MainContainer = styled.div`
-    height: 1050px;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     background-color: #FDFDF0;
 `;
 

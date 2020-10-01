@@ -11,12 +11,17 @@ const Container = styled.a`
     opacity: ${({ opacity }) => opacity};
     margin-top: 3rem;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
 
-const Button = ({ onClick, opacity }) => {
+const Button = ({ onClick, opacity, style }) => {
 
     return (
-        <Container opacity={opacity} onClick={onClick}>
+        <Container style={style} opacity={opacity} onClick={onClick}>
             Contact
         </Container>
     );
