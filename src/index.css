@@ -3,26 +3,36 @@
   src: local('Sanford'), url(./assets/sanford.ttf) format('ttf');
 }
 
-html {
-  overflow:   scroll;
-  font-family: 'Sanford';
-  color: #0e1647;
-  margin: 0px;
-  padding: 0px;
-  background-color: #FDFDF0;
-}
-
+html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  background: #FDFDF0;
+  color: #0e1647;
+  overflow: hidden;
+  font-family: "Sanford", sans-serif;
 }
 
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.canvas > div {
+  z-index: 1;
+}
+
+.loading {
+  padding: 10px;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.scrollArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
 }
