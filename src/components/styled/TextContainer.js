@@ -5,10 +5,10 @@ const TextContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem;
     position: absolute;
+    padding: 1rem;
     top: 10vh;
-    width: ${({ width }) => width > 450 ? '70vw' : '90vw'};;
+    width: ${({ width }) => width > 450 ? '70vw' : '90vw'};
 `;
 
 export default TextContainer;
