@@ -48,7 +48,10 @@ function Pages() {
   const [img1, img2, img3] = textures.map(texture => ((texture.minFilter = LinearFilter), texture))
   const { contentMaxWidth, mobile } = useBlock()
   const aspect = 1.75
-  const pixelWidth = contentMaxWidth * state.zoom
+  const pixelWidth = contentMaxWidth * state.zoom;
+
+  console.log('woo', [mobile ? -contentMaxWidth / 2 : 0, -contentMaxWidth / 2 / aspect - 0.4, 1]);
+
   return (
     <>
       <Block factor={1} offset={0}>
@@ -82,13 +85,18 @@ function Pages() {
 
       {/* Second section */}
       <Block factor={2.0} offset={2}>
-      <Dom position={[contentMaxWidth / 6, contentMaxWidth / 1.3 / aspect, 1]}>
-          <h1>Their Stock vs. our Stock</h1>
-        </Dom>
+     
+      <Dom position={[-contentMaxWidth / 1.33, contentMaxWidth / 1.3 / aspect, 1]}>
+          <h1>Their Stock</h1>
+      </Dom>
+
+      <Dom position={[contentMaxWidth / 3, contentMaxWidth / 1.3 / aspect, 1]}>
+        <h1>Our Stock</h1>
+      </Dom>
         <Content map={img2}>
-          <Dom style={{ width: pixelWidth / (mobile ? 1 : 2), textAlign: "right" }} position={[mobile ? -contentMaxWidth / 2 : 0, -contentMaxWidth / 2 / aspect - 0.4, 1]}>
+          <Dom style={{ width: pixelWidth / (mobile ? 1 : 0), textAlign: "right" }} position={[mobile ? -contentMaxWidth / 2 : 0, -contentMaxWidth / 2 / aspect - 0.4, 1]}>
             We’ve spent the last year cultivating a massive library of high-quality, RAW 4K footage. This is not that silly low-effort stock footage you’re used to seeing. Say goodbye to those dorky clips of overenthusiastic families dancing in front of white backdrops. We have access to footage that looks like it was shot with intention (because it was). Our footage is cohesive, powerful, and cinematic.
-          <br />
+            <br />
             <br />
           When you combine this with our incredible voiceover talent, experienced editorial and finishing staff, and accomplished comedy writers, you will not be able to tell that your ad uses stock footage at all.
           </Dom>
